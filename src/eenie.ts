@@ -1,23 +1,12 @@
-import * as log4js from 'log4js'
+import { configure, getLogger } from "log4js";
+const logger = getLogger();
 
-log4js.configure({
-  appenders: {
-    out: {
-      type: 'stdout',
-      layout: {
-        type: 'pattern',
-        pattern: '%d\t| %p\t| %m%n',
-      },
-    },
-  },
-  categories: {
-    default: {
-      appenders: ['out'],
-      level: 'debug',
-    },
-  },
-})
+configure({
+  appenders: { cheese: { type: "file", filename: "cheese.log" } },
+  categories: { default: { appenders: ["cheese"], level: "error" } }
+});
+logger.level = "debug";
 
-const eenie = () => log4js.getLogger().debug('meenie')
+const eenie = () => getLogger().debug('meenie')
 
 export default eenie
