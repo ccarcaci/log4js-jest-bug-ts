@@ -1,0 +1,24 @@
+{
+  "name": "log4js-jest-bug-ts",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:ccarcaci/log4js-jest-bug-ts.git",
+  "author": "ccarcaci <claudiocarcaci@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --passWithNoTests --runInBand",
+    "start": "node -r ts-node/register -r tsconfig-paths/register src/index.ts"
+  },
+  "dependencies": {
+    "log4js": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.11",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.5"
+  }
+}
