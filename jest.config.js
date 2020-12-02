@@ -9,6 +9,10 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleDirectories: [ 'node_modules', '.' ],
+  moduleDirectories: [
+    '<rootDir>/node_modules',
+    '<rootDir>/src',
+    '<rootDir>',
+  ],
   testTimeout: 1000*60*15,
 }
